@@ -1,7 +1,13 @@
-a = int(input())
+n = int(input())
+result = []
 
-for i in range(a):
-    num, str = input().split()
-    for x in str:
-        print(int(num)*x, end='')
-    print()
+for i in range(n):
+    repeat, data = input().split()
+    temp = ""
+    for j in range(len(data)):
+        temp = temp + data[j] * int(repeat)
+    
+    result.append(temp)
+
+for i in range(n):
+    print(result[i])
