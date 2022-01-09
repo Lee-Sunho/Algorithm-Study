@@ -6,17 +6,14 @@ def func(n):
     sum += n
     return sum
 
-n = 1
 data = set()
 not_self = set()
-while n < 10000:
+for n in range(1, 10001):
     data.add(n)
     result = n + func(n)
     not_self.add(result)
-    n += 1
 
 result = data - not_self
-
 
 for i in sorted(result):
     print(i)
