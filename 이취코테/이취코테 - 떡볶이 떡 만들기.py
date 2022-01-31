@@ -11,13 +11,11 @@ while start <= end:
         if i > h:
             sum += (i - h)
             
-    if sum == m:
-        break
-    
-    elif sum > m:
+    if sum >= m:
+        result = h
         start = h + 1
     
     else:
         end = h - 1
 
-print(h)
+print(result)
