@@ -1,4 +1,3 @@
-import imp
 import sys
 from bisect import bisect_left
 n = int(sys.stdin.readline())
