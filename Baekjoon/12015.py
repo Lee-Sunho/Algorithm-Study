@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import imp
+>>>>>>> 4a1cb2345bf1f7d01b2f0763de0a9998464a6685
 import sys
 from bisect import bisect_left
 n = int(sys.stdin.readline())
