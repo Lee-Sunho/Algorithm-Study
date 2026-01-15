@@ -2,3 +2,5 @@
 *.exe
 Baekjoon/.vscode/
 test.cpp
+*.out
+a.md
