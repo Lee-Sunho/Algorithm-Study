@@ -12,7 +12,6 @@ void combi(int start) {
             sum += i;
         }
         if (sum == 100) {
-            sort(result.begin(), result.end());
             for (int i : result) {
                 cout << i << '\n';
             }
@@ -37,6 +36,8 @@ int main() {
         cin >> x;
         v.push_back(x);
     }
+
+    sort(v.begin(), v.end());
 
     combi(-1);
 }
