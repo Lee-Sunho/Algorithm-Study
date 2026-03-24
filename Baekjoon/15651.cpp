@@ -1,26 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int *arr;
-int n, m;
+int n, m, ret[10];
 
-void dfs(int k){
-    if(k == m){
-        for(int i = 0; i < m; i++){
-            cout << arr[i] << ' ';
-        }
+void func(int depth) {
+    if (depth == m) {
+        for (int i = 0; i < m; i++) cout << ret[i] << ' ';
         cout << '\n';
         return;
     }
-    for(int i = 1; i <= n; i++){
-        arr[k] = i;
-        dfs(k + 1);
+
+    for (int i = 1; i <= n; i++) {
+        ret[depth] = i;
+        func(depth + 1);
     }
 }
 
-int main(){
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     cin >> n >> m;
 
-    arr = (int*)malloc(sizeof(int) * m);
-    dfs(0);
+    func(0);
+
+    return 0;
 }
