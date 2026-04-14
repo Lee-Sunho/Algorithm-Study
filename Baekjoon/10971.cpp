@@ -32,13 +32,9 @@ int main() {
         }
     }
 
+    // 0번 도시에서 시작하는 것으로 고정
     visited[0] = 1;
-    for (int i = 1; i < n; i++) {
-        if (visited[i] || arr[0][i] == 0) continue;
-        visited[i] = 1;
-        func(i, 2, arr[0][i]);
-        visited[i] = 0;
-    }
+    func(0, 1, 0);
 
     cout << min_cost;
 
